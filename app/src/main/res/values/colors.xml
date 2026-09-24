@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main App Colors -->
+    <color name="primary">#FF8FAB</color>
+    <color name="primary_dark">#F06292</color>
+
+    <!-- Cute Background -->
+    <color name="background">#FFF8FA</color>
+
+    <!-- Cards -->
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#4A3B40</color>
+    <color name="text_secondary">#8A777D</color>
+
+    <!-- Accent Colors -->
+    <color name="peach">#FFC6A5</color>
+    <color name="lavender">#DCC7FF</color>
+    <color name="mint">#C8F2E3</color>
+    <color name="yellow">#FFE69A</color>
+
+    <!-- Common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+</resources>

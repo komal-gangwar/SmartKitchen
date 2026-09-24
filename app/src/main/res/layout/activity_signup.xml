@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="28dp">
+
+        <!-- Logo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍳"
+            android:textSize="60sp"
+            android:layout_marginTop="30dp"/>
+
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smart Kitchen"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Your Account ✨"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="35dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's start your smart cooking journey! 💕"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Full Name -->
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="25dp"/>
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/edtSignupEmail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="15dp"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/edtSignupPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="15dp"/>
+
+        <!-- Password Requirements -->
+        <TextView
+            android:id="@+id/txtPasswordRequirements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔐 Password requirements&#10;&#10;• Minimum 8 characters&#10;• At least 1 uppercase letter (A-Z)&#10;• At least 1 lowercase letter (a-z)&#10;• At least 1 number (0-9)&#10;• At least 1 special character (@, #, $, !, etc.)"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:background="@drawable/rounded_edittext"
+            android:padding="15dp"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Confirm Password -->
+        <EditText
+            android:id="@+id/edtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="15dp"/>
+
+        <!-- Create Account Button -->
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="CREATE ACCOUNT"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="@color/primary"
+            android:layout_marginTop="25dp"/>
+
+        <!-- Login option -->
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login 💗"
+            android:textSize="15sp"
+            android:textColor="@color/primary_dark"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

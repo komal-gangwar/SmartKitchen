@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <!-- ============================= -->
+        <!-- BACK BUTTON -->
+        <!-- ============================= -->
+
+        <TextView
+            android:id="@+id/txtBack"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="‹  Back to recipes"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_dark"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="15dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
+        <!-- ============================= -->
+        <!-- RECIPE HERO -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtRecipeEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍝"
+                android:textSize="70sp"/>
+
+            <TextView
+                android:id="@+id/txtRecipeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creamy Garlic Pasta"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:gravity="center"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- QUICK INFORMATION -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+
+            <!-- RATING -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/rounded_edittext">
+
+                <TextView
+                    android:id="@+id/txtRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ 4.8"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="1dp"/>
+
+
+            <!-- TIME -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/rounded_edittext">
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏱ 25 min"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total time"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="1dp"/>
+
+
+            <!-- DIFFICULTY -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/rounded_edittext">
+
+                <TextView
+                    android:id="@+id/txtDifficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Easy"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Difficulty"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- DESCRIPTION -->
+        <!-- ============================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About this recipe"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="28dp"/>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A creamy and comforting pasta recipe that is quick enough for a busy evening and simple enough for beginners."
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="8dp"/>
+
+
+        <!-- ============================= -->
+        <!-- SERVINGS -->
+        <!-- ============================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:text="−"
+                android:textSize="20sp"
+                android:textColor="@color/text_primary"
+                android:backgroundTint="@color/peach"/>
+
+            <TextView
+                android:id="@+id/txtServings"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="2 servings"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:text="+"
+                android:textSize="20sp"
+                android:textColor="@color/text_primary"
+                android:backgroundTint="@color/mint"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- NUTRITION -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🥗 Nutrition per serving"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <TextView
+                android:id="@+id/txtNutrition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="420 kcal     •     Protein 14g     •     Carbs 52g     •     Fat 18g"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- INGREDIENTS -->
+        <!-- ============================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🛒 Ingredients"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="28dp"/>
+
+        <TextView
+            android:id="@+id/txtIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 200 g pasta&#10;• 4 cloves garlic, finely chopped&#10;• 1 tablespoon butter&#10;• 150 ml milk&#10;• 50 g grated cheese&#10;• ½ teaspoon black pepper&#10;• Salt to taste&#10;• 1 teaspoon olive oil"
+            android:textSize="15sp"
+            android:textColor="@color/text_primary"
+            android:lineSpacingExtra="7dp"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="10dp"/>
+
+
+        <!-- ============================= -->
+        <!-- HOW TO MAKE -->
+        <!-- ============================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👩‍🍳 How to Make"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="30dp"/>
+
+
+        <!-- ============================= -->
+        <!-- STEP 1 -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/txtStep1Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01  •  BOIL THE PASTA"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"/>
+
+            <TextView
+                android:id="@+id/txtStep1Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bring a large pot of water to a rolling boil. Add salt to the water, then add the pasta. Cook according to the packet instructions until al dente. Reserve about ½ cup of pasta water before draining."
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- STEP 2 -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/txtStep2Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02  •  MAKE THE GARLIC SAUCE"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"/>
+
+            <TextView
+                android:id="@+id/txtStep2Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heat olive oil and butter in a pan over medium-low heat. Add chopped garlic and cook gently for about 30–60 seconds. Do not let the garlic turn dark brown because it can become bitter."
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- STEP 3 -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/txtStep3Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03  •  ADD MILK AND CHEESE"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"/>
+
+            <TextView
+                android:id="@+id/txtStep3Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lower the heat. Slowly add the milk while stirring continuously. Add grated cheese and black pepper. Keep stirring until the cheese melts and the sauce becomes smooth and creamy."
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- STEP 4 -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/txtStep4Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="04  •  COMBINE EVERYTHING"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"/>
+
+            <TextView
+                android:id="@+id/txtStep4Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add the drained pasta to the sauce. Toss gently so every strand is coated. If the sauce feels too thick, add reserved pasta water one tablespoon at a time until you reach the consistency you like."
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- STEP 5 -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/txtStep5Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05  •  TASTE AND SERVE"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"/>
+
+            <TextView
+                android:id="@+id/txtStep5Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Taste the pasta and adjust salt or pepper if needed. Serve immediately while warm. Finish with a little extra grated cheese and freshly cracked black pepper."
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- CHEF TIPS -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/txtStep6Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💡 Chef's Tips"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <TextView
+                android:id="@+id/txtStep6Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Keep the garlic on low-medium heat so it doesn't burn.&#10;&#10;• Save pasta water — its starch helps loosen and bind the sauce.&#10;&#10;• Add cheese after lowering the heat for a smoother sauce.&#10;&#10;• Serve immediately for the best creamy texture."
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- FAVORITE -->
+        <!-- ============================= -->
+
+        <Button
+            android:id="@+id/btnFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="♡  ADD TO FAVORITES"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_dark"
+            android:backgroundTint="@color/peach"
+            android:layout_marginTop="25dp"/>
+
+
+        <!-- ============================= -->
+        <!-- START COOKING -->
+        <!-- ============================= -->
+
+        <Button
+            android:id="@+id/btnStartCooking"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="▶  START COOKING"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="25dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore Recipes"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find something delicious to cook ✨"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:text="🍳"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="@drawable/rounded_edittext"/>
+
+        </LinearLayout>
+
+
+        <!-- SEARCH BAR -->
+        <EditText
+            android:id="@+id/edtSearchRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="🔍  Search recipes..."
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:padding="15dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="22dp"/>
+
+
+        <!-- CATEGORY TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse by category"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="12dp"/>
+
+
+        <!-- CATEGORY ROW 1 -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="All"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/primary"/>
+
+                <Button
+                    android:id="@+id/btnBreakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="🍳 Breakfast"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/peach"
+                    android:layout_marginStart="8dp"/>
+
+                <Button
+                    android:id="@+id/btnLunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="🍱 Lunch"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/mint"
+                    android:layout_marginStart="8dp"/>
+
+                <Button
+                    android:id="@+id/btnDinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="🍛 Dinner"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/yellow"
+                    android:layout_marginStart="8dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <!-- FEATURED SECTION -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✨ Today's Inspiration"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"/>
+
+
+        <!-- FEATURED RECIPE CARD -->
+        <LinearLayout
+            android:id="@+id/cardFeatured"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍝"
+                android:textSize="40sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creamy Garlic Pasta"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Italian • Comfort Food"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭐ 4.8     ⏱ 25 min     Easy"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ALL RECIPES -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular Recipes 🍽️"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"/>
+
+
+        <!-- RECIPE CARD 1 -->
+        <LinearLayout
+            android:id="@+id/cardPasta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="125dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="🍝"
+                android:textSize="45sp"
+                android:gravity="center"
+                android:background="@color/peach"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Creamy Garlic Pasta"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Italian • Easy"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ 4.8   •   ⏱ 25 min"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="7dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="›"
+                android:textSize="28sp"
+                android:textColor="@color/primary_dark"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <!-- RECIPE CARD 2 -->
+        <LinearLayout
+            android:id="@+id/cardBiryani"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="125dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="🍛"
+                android:textSize="45sp"
+                android:gravity="center"
+                android:background="@color/yellow"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vegetable Biryani"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Indian • Medium"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ 4.9   •   ⏱ 45 min"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="7dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="›"
+                android:textSize="28sp"
+                android:textColor="@color/primary_dark"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <!-- RECIPE CARD 3 -->
+        <LinearLayout
+            android:id="@+id/cardPancakes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="125dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="🥞"
+                android:textSize="45sp"
+                android:gravity="center"
+                android:background="@color/lavender"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fluffy Pancakes"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast • Easy"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ 4.7   •   ⏱ 15 min"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="7dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="›"
+                android:textSize="28sp"
+                android:textColor="@color/primary_dark"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <!-- RECIPE CARD 4 -->
+        <LinearLayout
+            android:id="@+id/cardSalad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="125dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="🥗"
+                android:textSize="45sp"
+                android:gravity="center"
+                android:background="@color/mint"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fresh Garden Salad"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Healthy • Easy"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ 4.6   •   ⏱ 10 min"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="7dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="›"
+                android:textSize="28sp"
+                android:textColor="@color/primary_dark"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

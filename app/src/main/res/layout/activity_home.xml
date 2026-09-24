@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, Chef! 👩‍🍳"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:id="@+id/txtWelcomeEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to your Smart Kitchen 💕"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="🍳"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:background="@drawable/rounded_edittext"/>
+
+        </LinearLayout>
+
+
+        <!-- Main Welcome Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What are we cooking today? 🍲"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let your Smart Kitchen help you plan, cook and enjoy! ✨"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- Section Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Kitchen Tools 🥣"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="15dp"/>
+
+
+        <!-- AI Chat + Recipes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAIChat"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="🤖 AI Chat\nAsk Anything"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:backgroundTint="@color/lavender"/>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/btnRecipes"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="🍲 Recipes\nExplore"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:backgroundTint="@color/peach"/>
+
+        </LinearLayout>
+
+
+        <!-- Meal Planner + Grocery -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btnMealPlan"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="📅 Meal Plan\nPlan Meals"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:backgroundTint="@color/mint"/>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/btnGrocery"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="🛒 Grocery\nShopping List"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:backgroundTint="@color/yellow"/>
+
+        </LinearLayout>
+
+
+        <!-- Nutrition + Favorites -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btnNutrition"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="🥗 Nutrition\nCalories"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:backgroundTint="@color/mint"/>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/btnFavorites"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:text="❤️ Favorites\nSaved Recipes"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:backgroundTint="@color/peach"/>
+
+        </LinearLayout>
+
+
+        <!-- Logout -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="LOGOUT"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:backgroundTint="@color/primary_dark"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
