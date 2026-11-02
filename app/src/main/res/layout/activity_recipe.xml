@@ -64,6 +64,7 @@
             android:textSize="15sp"
             android:singleLine="true"
             android:inputType="text"
+            android:imeOptions="actionSearch"
             android:padding="15dp"
             android:background="@drawable/rounded_edittext"
             android:layout_marginTop="22dp"/>

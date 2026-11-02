@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -109,19 +110,21 @@ public class RecipeDetailActivity extends AppCompatActivity {
         // FIND RECIPE
         // -----------------------------------------
 
-        currentRecipe =
-                RecipeData.getRecipeById(recipeId);
+        setRecipeLoading(true);
+        RecipeRepository.getById(recipeId, new RecipeRepository.Callback() {
+            @Override public void onResult(Recipe recipe) {
+                currentRecipe = recipe;
+                setRecipeLoading(false);
+                displayRecipe();
+                updateServings();
+            }
 
-
-        // -----------------------------------------
-        // DISPLAY RECIPE
-        // -----------------------------------------
-
-        if (currentRecipe != null) {
-
-            displayRecipe();
-
-        }
+            @Override public void onError(Exception error) {
+                setRecipeLoading(false);
+                Toast.makeText(RecipeDetailActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+                finish();
+            }
+        });
 
 
         // -----------------------------------------
@@ -194,11 +197,19 @@ public class RecipeDetailActivity extends AppCompatActivity {
 
         btnStartCooking.setOnClickListener(v -> {
 
-            Toast.makeText(
-                    RecipeDetailActivity.this,
-                    "Cooking Mode coming next 👩‍🍳",
-                    Toast.LENGTH_SHORT
-            ).show();
+            if (currentRecipe == null) return;
+            Intent intent =
+                    new Intent(
+                            RecipeDetailActivity.this,
+                            CookingModeActivity.class
+                    );
+
+            intent.putExtra(
+                    "recipe_id",
+                    currentRecipe.id
+            );
+
+            startActivity(intent);
 
         });
 
@@ -295,6 +306,11 @@ public class RecipeDetailActivity extends AppCompatActivity {
                 currentRecipe.step5Description
         );
 
+    }
+
+    private void setRecipeLoading(boolean loading) {
+        btnStartCooking.setEnabled(!loading);
+        txtRecipeName.setText(loading ? "Loading recipe…" : "");
     }
 
 

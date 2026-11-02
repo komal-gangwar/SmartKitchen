@@ -13,11 +13,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-
-        <!-- ================================= -->
-        <!-- TOP BAR -->
-        <!-- ================================= -->
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="55dp"
@@ -45,13 +40,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/text_primary"
                 android:gravity="center"/>
-
         </LinearLayout>
-
-
-        <!-- ================================= -->
-        <!-- COOKING HEADER -->
-        <!-- ================================= -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,19 +67,15 @@
                 android:layout_marginTop="5dp"/>
 
             <TextView
+                android:id="@+id/txtAudioStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I'll guide you one step at a time 💕"
+                android:text="Preparing your cooking guide..."
                 android:textSize="14sp"
                 android:textColor="@color/text_secondary"
-                android:layout_marginTop="4dp"/>
-
+                android:layout_marginTop="5dp"
+                android:gravity="center"/>
         </LinearLayout>
-
-
-        <!-- ================================= -->
-        <!-- PROGRESS SECTION -->
-        <!-- ================================= -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -121,9 +106,7 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/primary_dark"/>
-
             </LinearLayout>
-
 
             <ProgressBar
                 android:id="@+id/cookingProgress"
@@ -134,13 +117,7 @@
                 android:progress="1"
                 android:progressTint="@color/primary"
                 android:layout_marginTop="10dp"/>
-
         </LinearLayout>
-
-
-        <!-- ================================= -->
-        <!-- CURRENT STEP CARD -->
-        <!-- ================================= -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -172,18 +149,12 @@
                 android:id="@+id/txtCookingStepDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bring a large pot of water to a rolling boil..."
+                android:text="Your cooking instruction will appear here."
                 android:textSize="16sp"
                 android:textColor="@color/text_secondary"
                 android:lineSpacingExtra="5dp"
                 android:layout_marginTop="12dp"/>
-
         </LinearLayout>
-
-
-        <!-- ================================= -->
-        <!-- CHEF TIP -->
-        <!-- ================================= -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -205,34 +176,141 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Take your time and follow the instructions carefully."
+                android:text="Chef's tip will appear here."
                 android:textSize="14sp"
                 android:textColor="@color/text_primary"
                 android:lineSpacingExtra="4dp"
                 android:layout_gravity="center_vertical"/>
-
         </LinearLayout>
 
-
-        <!-- ================================= -->
-        <!-- READ ALOUD BUTTON -->
-        <!-- ================================= -->
-
-        <Button
-            android:id="@+id/btnReadAloud"
+        <LinearLayout
+            android:id="@+id/audioPlayerCard"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="🔊  READ THIS STEP ALOUD"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/text_primary"
-            android:backgroundTint="@color/lavender"
-            android:layout_marginTop="20dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="20dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-        <!-- ================================= -->
-        <!-- NEXT STEP BUTTON -->
-        <!-- ================================= -->
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:text="🎧"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_edittext"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cooking Instructions"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+
+                    <TextView
+                        android:id="@+id/txtAudioExpiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Audio available for 24 hours"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/audioSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:progressTint="@color/primary"
+                android:thumbTint="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtAudioCurrentTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0:00"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"/>
+
+                <TextView
+                    android:id="@+id/txtAudioTotalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnRestartAudio"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:text="↻"
+                    android:textSize="25sp"
+                    android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/lavender"/>
+
+                <Button
+                    android:id="@+id/btnPlayPauseAudio"
+                    android:layout_width="75dp"
+                    android:layout_height="55dp"
+                    android:text="▶"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/primary"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <Button
+                    android:id="@+id/btnPlaybackSpeed"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:text="1.0×"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/mint"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtSpeedInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Playback speed: 1.0×"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnNextStep"
@@ -243,12 +321,7 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             android:backgroundTint="@color/primary"
-            android:layout_marginTop="12dp"/>
-
-
-        <!-- ================================= -->
-        <!-- EXIT -->
-        <!-- ================================= -->
+            android:layout_marginTop="15dp"/>
 
         <TextView
             android:id="@+id/txtExitCooking"
@@ -265,7 +338,5 @@
             android:layout_marginBottom="20dp"
             android:clickable="true"
             android:focusable="true"/>
-
     </LinearLayout>
-
 </ScrollView>
